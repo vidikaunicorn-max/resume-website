@@ -492,6 +492,7 @@ a { color: inherit; }
 }
 
 .lmm-block { text-align: left; }
+.page-tagline + .exp-card { margin-top: 36px; }
 .lmm-block .block-title { text-align: center; margin-bottom: 14px; }
 
 .lmm-section { margin-top: 70px; }
@@ -641,4 +642,43 @@ a { color: inherit; }
   .gallery { grid-template-columns: 1fr; }
   .gallery img { height: 260px; }
   .toy-grid, .doc-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Media cards (award, video) ---------- */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.media-card {
+  padding: 26px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--pink-soft);
+  box-shadow: var(--shadow);
+}
+
+.media-sub {
+  margin-bottom: 18px;
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.media-card img,
+.media-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: var(--pink-mist);
+}
+.media-card video { background: #2b1a24; }
+
+@media (max-width: 760px) {
+  .media-grid { grid-template-columns: 1fr; }
 }
