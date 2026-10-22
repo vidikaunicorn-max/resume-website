@@ -200,10 +200,12 @@ a { color: inherit; }
 }
 
 .tabs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
 }
+.tabs .tab { flex: 0 1 calc((100% - 56px) / 3); }
 
 .tab {
   display: flex;
@@ -299,13 +301,14 @@ a { color: inherit; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; text-align: left; padding-top: 10px; }
   .hero-right { order: -1; }
-  .tabs { grid-template-columns: repeat(2, 1fr); }
+  .tabs .tab { flex-basis: calc((100% - 28px) / 2); }
 }
 
 @media (max-width: 560px) {
   .nav { flex-direction: column; }
   .nav-contact { justify-content: center; }
-  .tabs { grid-template-columns: 1fr; gap: 18px; }
+  .tabs { gap: 18px; }
+  .tabs .tab { flex-basis: 100%; }
   .tab { padding: 32px 16px; }
 }
 
