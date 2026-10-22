@@ -682,3 +682,28 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .media-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Card with a document cover ---------- */
+.cover-card {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 28px;
+  align-items: center;
+}
+.cover-card .doc-actions { justify-content: flex-start; margin-top: 16px; }
+.cover-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--pink-soft);
+  box-shadow: var(--shadow);
+  transform: rotate(2deg);
+  transition: transform 0.2s;
+}
+.cover-img:hover img { transform: rotate(0deg) scale(1.02); }
+
+@media (max-width: 640px) {
+  .cover-card { grid-template-columns: 1fr; }
+  .cover-img { max-width: 240px; margin: 0 auto; }
+}
