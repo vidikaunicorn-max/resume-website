@@ -448,3 +448,197 @@ a { color: inherit; }
 @media (max-width: 560px) {
   .exp-card { padding: 24px 20px; }
 }
+
+/* ---------- Project pages ---------- */
+.page-wide { max-width: 1100px; }
+
+.page-role {
+  margin: 10px 0 12px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.page-tagline {
+  max-width: 760px;
+  margin: 16px auto 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.75fr;
+  gap: 18px;
+  margin: 40px 0;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+  border: 4px solid #fff;
+  box-shadow: var(--shadow);
+}
+.gallery .g-tall img { object-position: center 20%; }
+
+.block-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--pink);
+  margin-bottom: 4px;
+}
+
+.lmm-block { text-align: left; }
+.lmm-block .block-title { text-align: center; margin-bottom: 14px; }
+
+.lmm-section { margin-top: 70px; }
+
+.section-title.small { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+
+.toy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.toy-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 26px 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--pink-soft);
+  box-shadow: var(--shadow);
+}
+
+.toy-head { display: flex; align-items: center; gap: 14px; }
+.toy-head h3 { font-size: 1.2rem; font-weight: 800; line-height: 1.3; }
+
+.toy-num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), #ff7eb6);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.toy-tag { font-size: 0.9rem; color: var(--text-soft); }
+
+.toy-chip {
+  padding: 8px 14px;
+  border-radius: 16px;
+  background: var(--pink-mist);
+  color: var(--pink-deep);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.toy-mat { margin-top: auto; font-size: 0.92rem; color: var(--text-soft); }
+.toy-mat strong { color: var(--text); }
+
+.sub-title {
+  margin: 50px 0 22px;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: var(--pink);
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.action-grid figure { margin: 0; }
+.action-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 4px solid #fff;
+  box-shadow: var(--shadow);
+}
+.action-grid figcaption {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+}
+.chip-list li {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 2px solid var(--pink-soft);
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(255, 79, 154, 0.1);
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 26px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--pink-soft);
+  box-shadow: var(--shadow);
+}
+.doc-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--pink-mist);
+}
+.doc-card h3 { font-size: 1.3rem; font-weight: 800; }
+.doc-card p { color: var(--text-soft); }
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.doc-actions .exp-link { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery .g-tall { grid-column: 1 / -1; }
+  .gallery .g-tall img { height: 420px; }
+  .toy-grid { grid-template-columns: repeat(2, 1fr); }
+  .action-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .gallery { grid-template-columns: 1fr; }
+  .gallery img { height: 260px; }
+  .toy-grid, .doc-grid { grid-template-columns: 1fr; }
+}
