@@ -356,3 +356,95 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue { animation: none; }
 }
+
+/* ---------- Experience cards ---------- */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.exp-card {
+  padding: 30px 32px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--pink-soft);
+  box-shadow: var(--shadow);
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+}
+
+.exp-title {
+  flex: 1 1 320px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.exp-date {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--pink-mist);
+  color: var(--pink-deep);
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.exp-sub {
+  margin-top: 6px;
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+.exp-points {
+  margin: 14px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.exp-points li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 8px;
+}
+.exp-points li::before {
+  content: "♡";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+  font-weight: 800;
+}
+
+.exp-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--pink), #ff7eb6);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 79, 154, 0.3);
+  transition: transform 0.2s;
+}
+.exp-link:hover { transform: translateY(-2px); }
+
+.exp-url {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.exp-url a { color: var(--text-soft); }
+
+@media (max-width: 560px) {
+  .exp-card { padding: 24px 20px; }
+}
