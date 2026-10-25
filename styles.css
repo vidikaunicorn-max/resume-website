@@ -780,3 +780,44 @@ a { color: inherit; }
   .art-frame { padding: 12px; border-width: 8px; width: min(300px, 100%); margin: 0 auto; }
   .gallery-list { gap: 56px; }
 }
+
+/* ---------- Award badge ---------- */
+.badge-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 760px;
+  margin: 36px auto 0;
+  padding: 24px 28px;
+  text-align: left;
+  background: linear-gradient(135deg, #fff, var(--pink-mist));
+  border: 2px solid var(--pink-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.badge-level {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), #ff7eb6);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 0 0 6px #fff, 0 10px 24px rgba(255, 79, 154, 0.35);
+}
+.badge-card + .exp-card { margin-top: 28px; }
+
+.badge-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--pink-deep);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 560px) {
+  .badge-card { flex-direction: column; text-align: center; }
+}
