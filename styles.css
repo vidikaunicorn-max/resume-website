@@ -726,17 +726,18 @@ a { color: inherit; }
 
 .artwork {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 44px;
   align-items: center;
   text-align: left;
 }
+.artwork-flip { grid-template-columns: 1fr 340px; }
 .artwork-flip .art-frame { order: 2; }
 
 /* gallery frame: wood edge, cream mat, soft wall shadow */
 .art-frame {
   position: relative;
-  padding: 22px;
+  padding: 16px;
   background: #fbf6ef;
   border: 10px solid #5b3a29;
   border-radius: 4px;
@@ -752,7 +753,7 @@ a { color: inherit; }
   display: block;
   width: 100%;
   height: auto;
-  max-height: 620px;
+  max-height: 400px;
   object-fit: contain;
   pointer-events: none;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
@@ -774,8 +775,8 @@ a { color: inherit; }
 .art-text p { font-size: 1.05rem; }
 
 @media (max-width: 860px) {
-  .artwork { grid-template-columns: 1fr; gap: 24px; }
+  .artwork, .artwork-flip { grid-template-columns: 1fr; gap: 24px; }
   .artwork-flip .art-frame { order: 0; }
-  .art-frame { padding: 14px; border-width: 8px; }
+  .art-frame { padding: 12px; border-width: 8px; width: min(300px, 100%); margin: 0 auto; }
   .gallery-list { gap: 56px; }
 }
